@@ -26,10 +26,17 @@ app = Flask(__name__)
 
 
 # [START form]
+
+@app.route('/')
+def index():
+    return 'Index Page'
+
+
 @app.route('/form')
 def form():
     return render_template('form.html')
 # [END form]
+
 
 
 # [START submitted]
