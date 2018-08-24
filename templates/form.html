@@ -1,27 +1,26 @@
 <html>
- <head>
-   <title>Submitted form</title>
+  <head>
+    <title>Submit a form</title>
    <link rel="stylesheet" type="text/css" href="/static/style.css">
- </head>
-<div class="c5190">GRACHAR TESTING
-</div>
-<form class="form">
-  <div class="form-group">
-    <label class="label">Name</label>
-    <input placeholder="Type here your name" name="name" class="input"/>
-  </div>
-  <div class="form-group">
-    <label class="label">Email</label>
-    <input type="email" placeholder="Type here your email" name="email" class="input"/>
-  </div>
-  <label class="label">Website URL</label>
-  <input name="site-url" class="input"/>
-  <div class="form-group">
-    <label class="label">Comments</label>
-    <textarea name="comments" class="textarea"></textarea>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="button">Send</button>
-  </div>
-</form>
+  </head>
+  <body>
+    <div id="container">
+      <div class="pagetitle">
+        <h1>Submit a form</h1>
+      </div>
+      <div id="main">
+        <form method="post" action="{{ url_for('submitted_form') }}">
+          <label for="name">Name:</label>
+          <input type="text" name="name"><br />
+          <label for="email">Email address:</label>
+          <input type="email" name="email"><br />
+          <label for="site_url">Website URL:</label>
+          <input type="url" name="site_url"><br />
+          <label for="comments">Comments:</label>
+          <textarea name="comments"></textarea><br />
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
